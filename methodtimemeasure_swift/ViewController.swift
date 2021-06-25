@@ -10,8 +10,8 @@ import AdServices
 
 class ViewController: UIViewController {
     
-    @IBOutlet weak var textField: UITextField!
     @IBOutlet weak var rerunBtn: UIButton!
+    @IBOutlet weak var resultSetView: UITextView!
     
     @IBAction func buttonTap(_ sender: Any) {
         displayResult()
@@ -30,7 +30,7 @@ class ViewController: UIViewController {
     }
     
     func displayResult() {
-        textField.text = String(calculateExecutionTime()) + " sec"
+        resultSetView.text += "\(calculateExecutionTime()) sec\n"
     }
 
     override func viewDidLoad() {
