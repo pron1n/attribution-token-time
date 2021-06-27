@@ -11,10 +11,15 @@ import AdServices
 class ViewController: UIViewController {
     
     @IBOutlet weak var rerunBtn: UIButton!
+    @IBOutlet weak var copyBtn: UIButton!
     @IBOutlet weak var resultSetView: UITextView!
     
     @IBAction func buttonTap(_ sender: Any) {
         displayResult()
+    }
+    
+    @IBAction func copyButtonTap(_ sender: Any) {
+        UIPasteboard.general.string = resultSetView.text
     }
     
     func calculateExecutionTime() -> Double {

@@ -52,6 +52,20 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CvF-Ep-1Xt">
+                                <rect key="frame" x="40" y="442" width="112" height="30"/>
+                                <color key="backgroundColor" systemColor="systemGray2Color"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="7SZ-WC-0Ui"/>
+                                    <constraint firstAttribute="width" constant="112" id="v0u-jN-anD"/>
+                                </constraints>
+                                <state key="normal" title="Copy Log">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="copyButtonTap:" destination="BYZ-38-t0r" eventType="touchUpInside" id="3xY-OR-6mm"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -60,12 +74,15 @@
                             <constraint firstItem="2Zk-NV-WCR" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="40" id="35R-ww-2FP"/>
                             <constraint firstItem="dJZ-Np-ul8" firstAttribute="top" secondItem="2Zk-NV-WCR" secondAttribute="bottom" constant="19" id="3aq-cb-x4Y"/>
                             <constraint firstItem="2Zk-NV-WCR" firstAttribute="top" secondItem="TQS-gc-N9E" secondAttribute="bottom" constant="1" id="EZv-Me-fdy"/>
+                            <constraint firstItem="CvF-Ep-1Xt" firstAttribute="top" secondItem="dJZ-Np-ul8" secondAttribute="bottom" constant="8" id="Kh0-aV-xfe"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="TQS-gc-N9E" secondAttribute="trailing" constant="40" id="MjR-ci-1Yn"/>
+                            <constraint firstItem="CvF-Ep-1Xt" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="40" id="R8P-vT-5u1"/>
                             <constraint firstItem="TQS-gc-N9E" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="30" id="WFn-bg-OhK"/>
                             <constraint firstItem="TQS-gc-N9E" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="40" id="khK-ho-Ebx"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="copyBtn" destination="CvF-Ep-1Xt" id="WcC-Hv-dmb"/>
                         <outlet property="rerunBtn" destination="dJZ-Np-ul8" id="Elv-hx-7N3"/>
                         <outlet property="resultSetView" destination="2Zk-NV-WCR" id="mtZ-2o-WQ9"/>
                     </connections>
